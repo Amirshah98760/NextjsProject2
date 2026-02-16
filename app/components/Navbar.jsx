@@ -28,11 +28,11 @@ const Navbar = () => {
   </Link>
 
   {/* Dropdown menu */}
-  <ul className="absolute left-0 mt-4 w-40 bg-gray-800 text-white rounded shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+  {/* <ul className="absolute left-0 mt-4 w-40 bg-gray-800 text-white rounded shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
     <li className="px-4 py-2 hover:bg-gray-700">Amir 1</li>
     <li className="px-4 py-2 hover:bg-gray-700">Amir 2</li>
     <li className="px-4 py-2 hover:bg-gray-700">Amir 3</li>
-  </ul>
+  </ul> */}
 </li>
       </ul>
     </div>
