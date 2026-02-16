@@ -1,18 +1,28 @@
+"use client"
 import Link from 'next/link'
-import React from 'react'
+// import React from 'react'
+import {usePathname} from 'next/navigation'
 
 const Navbar = () => {
+  const pathname = usePathname();
+  const linkclass = (path) =>
+    pathname === path
+      ? "text-white hover:text-gray-300 font-bold"
+      : "text-white hover:text-gray-300"
+
+
+
   return (
-    <div className="bg-blue-500 p-4 flex items-center justify-between">
+    <div className="bg-blue-500 p-4 flex items-center justify-between sticky top-0 z-50">
       <h1 className="text-white text-xl font-bold">Navbar</h1>
       <ul className="flex space-x-4 mt-2">
-        <li>    <Link href="/" className="text-white hover:text-gray-300">Home</Link></li>
-        <li>    <Link href="/about" className="text-white hover:text-gray-300">About</Link></li>
-        <li>    <Link href="/contact" className="text-white hover:text-gray-300">Contact</Link></li>
+        <li>    <Link href="/" className={linkclass('/')}>Home</Link></li>
+        <li>    <Link href="/about" className={linkclass('/about')}>About</Link></li>
+        <li>    <Link href="/contact" className={linkclass('/contact')}>Contact</Link></li>
        <li className="relative group">
   <Link
     href="/services"
-    className="text-white hover:text-gray-300"
+    className={linkclass('/services') + " inline-flex items-center"}
   >
     Services
   </Link>
